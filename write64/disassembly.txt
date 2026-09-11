@@ -1,0 +1,26 @@
+
+./write:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000401000 <_start>:
+  401000:	48 c7 c0 01 00 00 00 	mov    $0x1,%rax
+  401007:	48 c7 c7 01 00 00 00 	mov    $0x1,%rdi
+  40100e:	48 c7 c6 2a 10 40 00 	mov    $0x40102a,%rsi
+  401015:	48 c7 c2 0d 00 00 00 	mov    $0xd,%rdx
+  40101c:	0f 05                	syscall
+  40101e:	48 c7 c0 3c 00 00 00 	mov    $0x3c,%rax
+  401025:	48 31 ff             	xor    %rdi,%rdi
+  401028:	0f 05                	syscall
+
+000000000040102a <message>:
+  40102a:	48                   	rex.W
+  40102b:	65 6c                	gs insb (%dx),%es:(%rdi)
+  40102d:	6c                   	insb   (%dx),%es:(%rdi)
+  40102e:	6f                   	outsl  %ds:(%rsi),(%dx)
+  40102f:	2c 20                	sub    $0x20,%al
+  401031:	77 6f                	ja     4010a2 <message+0x78>
+  401033:	72 6c                	jb     4010a1 <message+0x77>
+  401035:	64                   	fs
+  401036:	0a                   	.byte 0xa

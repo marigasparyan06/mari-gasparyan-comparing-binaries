@@ -1,0 +1,3 @@
+execve("./exit", ["./exit"], 0x7ffe82a1a060 /* 21 vars */) = 0
+exit(42)                                = ?
++++ exited with 42 +++

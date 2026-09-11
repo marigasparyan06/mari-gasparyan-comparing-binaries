@@ -1,0 +1,15 @@
+
+./write:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+08049000 <_start>:
+ 8049000:	ba 0d 00 00 00       	mov    $0xd,%edx
+ 8049005:	b9 00 a0 04 08       	mov    $0x804a000,%ecx
+ 804900a:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 804900f:	b8 04 00 00 00       	mov    $0x4,%eax
+ 8049014:	cd 80                	int    $0x80
+ 8049016:	b8 01 00 00 00       	mov    $0x1,%eax
+ 804901b:	bb 00 00 00 00       	mov    $0x0,%ebx
+ 8049020:	cd 80                	int    $0x80
